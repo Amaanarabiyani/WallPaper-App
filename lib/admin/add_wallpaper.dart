@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -31,7 +30,7 @@ class _AddWalpaperState extends State<AddWalpaper> {
     if (selectedimage != null) {
       String addId = randomAlphaNumeric(10);
       Reference FirebaseStorageref =
-          FirebaseStorage.instance.ref().child("blog Image").child(addId);
+          FirebaseStorage.instance.ref().child("User Image").child(addId);
 
       final UploadTask task = FirebaseStorageref.putFile(selectedimage!);
       var downloadurl = await (await task).ref.getDownloadURL();
@@ -41,7 +40,7 @@ class _AddWalpaperState extends State<AddWalpaper> {
         "category": value,
         "Id": addId,
       };
-      await DataBaseMethods()
+      await DataBaseMethod()
           .addWallpaper(addItem, addId, value!)
           .then((value) {
         Fluttertoast.showToast(

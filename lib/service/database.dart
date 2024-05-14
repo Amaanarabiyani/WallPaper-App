@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class DataBaseMethods {
+class DataBaseMethod {
   Future addWallpaper(
       Map<String, dynamic> wallpaperInfoMap, String id, String category) async {
     return await FirebaseFirestore.instance
