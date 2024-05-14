@@ -85,13 +85,14 @@ class _CategoriesState extends State<Categories> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Container(
+                        height: 188,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Image.network(
-                          "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                          "https://getwallpapers.com/wallpaper/full/2/9/7/494243.jpg",
                           fit: BoxFit.cover,
-                          height: 188,
+                          height: MediaQuery.of(context).size.height,
                           width: MediaQuery.of(context).size.width,
                         ),
                       ),
@@ -133,7 +134,7 @@ class _CategoriesState extends State<Categories> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Image.network(
-                          "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=600",
+                          "https://wallpaperaccess.com/full/930661.jpg",
                           fit: BoxFit.cover,
                           height: 188,
                           width: MediaQuery.of(context).size.width,
@@ -177,7 +178,7 @@ class _CategoriesState extends State<Categories> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Image.network(
-                          "https://images.pexels.com/photos/618079/pexels-photo-618079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                          "https://wallpaperaccess.com/full/1912032.jpg",
                           fit: BoxFit.cover,
                           height: 188,
                           width: MediaQuery.of(context).size.width,
@@ -196,7 +197,6 @@ class _CategoriesState extends State<Categories> {
                           "City",
                           style: TextStyle(
                             fontFamily: "Poppins",
-                            letterSpacing: 0,
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,

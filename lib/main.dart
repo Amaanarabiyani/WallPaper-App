@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/admin/add_wallpaper.dart';
-import 'package:wallpaper_app/admin/admin.dart';
 import 'package:wallpaper_app/firebase_options.dart';
 import 'package:wallpaper_app/widget/bottomnav.dart';
 
@@ -49,6 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decrementCounter() {
+    if (_counter == 0 || _counter < 0) {
+      _incrementCounter();
+    }
+    setState(() {
+      _counter--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(
           "Flutter Demo Home Page",
-          style: TextStyle(fontFamily: ""),
+          style: TextStyle(fontFamily: "Poppins"),
         ),
       ),
       body: Center(
@@ -70,9 +78,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Text(
-              '$_counter',
+              _counter.toString(),
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            FloatingActionButton(
+              onPressed: _decrementCounter,
+              child: Icon(Icons.remove),
+              tooltip: "Decrement",
+            )
           ],
         ),
       ),

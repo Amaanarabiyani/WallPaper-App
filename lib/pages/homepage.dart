@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(width: 130),
+                SizedBox(width: 80),
                 Text(
                   "Wallify",
                   style: TextStyle(
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                   viewportFraction: 1,
                   enlargeCenterPage: true,
                   enlargeStrategy: CenterPageEnlargeStrategy.height,
-                  autoPlay: true,
+                  autoPlay: false,
                   onPageChanged: (index, reason) {
                     setState(() {
                       activeIndex = index;
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
             AnimatedSmoothIndicator(
               activeIndex: activeIndex,
               count: 05,
-              effect: JumpingDotEffect(
+              effect: ExpandingDotsEffect(
                 activeDotColor: Colors.blue,
                 dotHeight: 15,
                 dotWidth: 15,

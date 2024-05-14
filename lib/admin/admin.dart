@@ -121,6 +121,7 @@ class _AdminPanelState extends State<AdminPanel> {
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: TextFormField(
+                                  keyboardType: TextInputType.phone,
                                   controller: passwordcontroller,
                                   validator: (value) {
                                     if (value.toString().isEmpty) {
@@ -172,7 +173,7 @@ class _AdminPanelState extends State<AdminPanel> {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -185,6 +186,7 @@ class _AdminPanelState extends State<AdminPanel> {
       Snapshot.docs.forEach((result) {
         if (result.data()["id"] != usernamecontroller.text.trim()) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            duration: Duration(seconds: 1),
             backgroundColor: Colors.orangeAccent,
             content: Text(
               "Your Id Is Not Correct",
