@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "536218224060",
+    "project_id": "sfirebase-a8d95",
+    "storage_bucket": "sfirebase-a8d95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536218224060:android:8a077d34136782bacdd7b9",
+        "android_client_info": {
+          "package_name": "com.example.wallpaper_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnEO9oUCNfz145JE1G78N9NElvSKXKMvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
