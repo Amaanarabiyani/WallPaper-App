@@ -206,7 +206,7 @@ class _AdminPanelState extends State<AdminPanel> {
           ));
         } else {
           Route route = MaterialPageRoute(builder: (context) => AddWalpaper());
-          Navigator.pushReplacement(context, route);
+          Navigator.push(context, route);
         }
       });
     });
