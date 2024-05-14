@@ -10,6 +10,25 @@ class AllWallpaper extends StatefulWidget {
 class _AllWallpaperState extends State<AllWallpaper> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Container(
+        margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+        child: Column(
+          children: [
+            Center(
+              child: Text(
+                "Categories",
+                style: TextStyle(
+                  fontFamily: "Poppins",
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
