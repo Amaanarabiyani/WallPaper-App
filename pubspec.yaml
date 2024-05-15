@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_icon: ^0.0.9
+  animated_text_kit: ^4.2.2
   cached_network_image: ^3.3.1
   carousel_slider: ^4.2.1
   cloud_firestore: ^4.17.3
@@ -75,11 +76,11 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts\Poppins-SemiBoldItalic.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: Poet
+      fonts:
+        - asset: fonts\PoetsenOne-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

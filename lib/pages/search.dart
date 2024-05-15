@@ -38,24 +38,34 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Search Wallpaper",
+          style: TextStyle(
+            fontFamily: "Poet",
+            fontSize: 30,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: Container(
-        margin: EdgeInsets.only(top: 30, left: 10, right: 10),
+        margin: EdgeInsets.only(top: 20, left: 10, right: 10),
         child: Column(
           children: [
-            Center(
-              child: Text(
-                "Search",
-                style: TextStyle(
-                  fontFamily: "Poppins",
-                  fontSize: 30,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
+            // Center(
+            //   child: Text(
+            //     "Search WallPaper",
+            //     style: TextStyle(
+            //       fontFamily: "",
+            //       fontSize: 30,
+            //       color: Colors.black,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 20,
+            // ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               margin: EdgeInsets.symmetric(horizontal: 20),
@@ -65,9 +75,15 @@ class _SearchState extends State<Search> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextFormField(
+                style: TextStyle(
+                  fontFamily: "Poet",
+                ),
                 controller: searchcontroller,
                 decoration: InputDecoration(
                   hintText: "Search Photos",
+                  hintStyle: TextStyle(
+                    fontFamily: "poppins",
+                  ),
                   border: InputBorder.none,
                   suffixIcon: GestureDetector(
                     onTap: () {
@@ -91,7 +107,7 @@ class _SearchState extends State<Search> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Expanded(
               child: wallpaper(photos, context),

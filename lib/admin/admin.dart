@@ -56,8 +56,8 @@ class _AdminPanelState extends State<AdminPanel> {
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "",
+                          fontWeight: FontWeight.w100,
+                          fontFamily: "Trajan Pro",
                         ),
                       ),
                       SizedBox(
@@ -101,6 +101,9 @@ class _AdminPanelState extends State<AdminPanel> {
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "Username",
+                                    hintStyle: TextStyle(
+                                      fontFamily: "poppins",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -132,6 +135,9 @@ class _AdminPanelState extends State<AdminPanel> {
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: "Enter Password",
+                                    hintStyle: TextStyle(
+                                      fontFamily: "poppins",
+                                    ),
                                   ),
                                 ),
                               ),
@@ -161,6 +167,7 @@ class _AdminPanelState extends State<AdminPanel> {
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
+                                        fontFamily: 'poppins',
                                       ),
                                     ),
                                   ),
@@ -191,7 +198,8 @@ class _AdminPanelState extends State<AdminPanel> {
             content: Text(
               "Your Id Is Not Correct",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                // fontWeight: FontWeight.bold,
+                fontFamily: "Trajan Pro",
               ),
             ),
           ));
@@ -202,7 +210,8 @@ class _AdminPanelState extends State<AdminPanel> {
             content: Text(
               "Your Password Is Not Correct",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
+                // fontWeight: FontWeight.w100,
+                fontFamily: "Trajan Pro",
               ),
             ),
           ));

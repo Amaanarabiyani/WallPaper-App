@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaper_app/admin/admin.dart';
 import 'package:wallpaper_app/firebase_options.dart';
 import 'package:wallpaper_app/pages/all_wallpapr.dart';
+import 'package:wallpaper_app/widget/bottomnav.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AllWallpaper(),
+      home: BottomNav(),
     );
   }
 }
@@ -63,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(
           "Flutter Demo Home Page",
-          style: TextStyle(fontFamily: "Poppins"),
+          style: TextStyle(fontFamily: "Trajan Pro"),
         ),
       ),
       body: Center(
@@ -73,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
               style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: "Trajan Pro",
               ),
             ),
             Text(

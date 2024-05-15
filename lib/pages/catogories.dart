@@ -11,22 +11,32 @@ class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Categories",
+          style: TextStyle(
+            fontFamily: "Poet",
+            fontSize: 30,
+          ),
+        ),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+          margin: EdgeInsets.only(top: 0, left: 20, right: 20),
           child: Column(
             children: [
-              Center(
-                child: Text(
-                  "Categories",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              // Center(
+              //   child: Text(
+              //     "Categories",
+              //     style: TextStyle(
+              //       fontFamily: "Poppins",
+              //       fontSize: 30,
+              //       color: Colors.black,
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 height: 20,
               ),

@@ -40,9 +40,7 @@ class _AddWalpaperState extends State<AddWalpaper> {
         "category": value,
         "Id": addId,
       };
-      await DataBaseMethod()
-          .addWallpaper(addItem, addId, value!)
-          .then((value) {
+      await DataBaseMethod().addWallpaper(addItem, addId, value!).then((value) {
         Fluttertoast.showToast(
           msg: "Your Wallpaper Has Been Added Sucessfully",
           toastLength: Toast.LENGTH_LONG,
@@ -72,7 +70,7 @@ class _AddWalpaperState extends State<AddWalpaper> {
         leading: GestureDetector(
           onTap: () {
             Route route = MaterialPageRoute(builder: (context) => AdminPanel());
-            Navigator.push(context, route);
+            Navigator.pop(context);
           },
           child: Icon(
             Icons.arrow_back,
