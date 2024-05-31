@@ -1,6 +1,9 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:wallpaper_app/model/photomodel.dart';
 import 'package:http/http.dart' as http;
 import 'package:wallpaper_app/widget/wallpaperwidget.dart';
@@ -96,9 +99,9 @@ class _SearchState extends State<Search> {
                         ? GestureDetector(
                             onTap: () {
                               photos = [];
-                              photos.clear();
 
                               search = false;
+
                               searchcontroller.clear();
                               setState(() {});
                             },
@@ -120,4 +123,13 @@ class _SearchState extends State<Search> {
       ),
     );
   }
+
+  // _save() async {
+  //   var response = await Dio().get(widget.imagePath,
+  //       options: Options(responseType: ResponseType.bytes));
+  //   final result =
+  //       await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+  //   print(result);
+  //   Navigator.pop(context);
+  // }
 }

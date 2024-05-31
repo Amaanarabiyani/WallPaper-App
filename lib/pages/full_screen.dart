@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // ignore: must_be_immutable
 class fullScreen extends StatefulWidget {
@@ -38,10 +39,10 @@ class _fullScreenState extends State<fullScreen> {
                 Stack(
                   children: [
                     Container(
-                      height: 50,
-                      width: MediaQuery.of(context).size.width / 2,
+                      height: 70,
+                      width: MediaQuery.of(context).size.width / 1.7,
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.white54, width: 1),
                         borderRadius: BorderRadius.circular(30),
                         gradient: LinearGradient(
                           colors: [
@@ -51,18 +52,19 @@ class _fullScreenState extends State<fullScreen> {
                         ),
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "Set Wallpaer",
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 25,
                               color: Colors.white,
                             ),
                           ),
                           Text(
                             "Image Will Be Saved in Gallery",
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: 12,
                               color: Colors.white,
                             ),
                           ),
@@ -70,7 +72,22 @@ class _fullScreenState extends State<fullScreen> {
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    "Cancel",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
