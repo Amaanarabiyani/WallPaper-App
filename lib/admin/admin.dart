@@ -56,8 +56,7 @@ class _AdminPanelState extends State<AdminPanel> {
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 30,
-                          fontWeight: FontWeight.w100,
-                          fontFamily: "Trajan Pro",
+                          fontFamily: "Poet",
                         ),
                       ),
                       SizedBox(
@@ -196,7 +195,7 @@ class _AdminPanelState extends State<AdminPanel> {
             duration: Duration(seconds: 1),
             backgroundColor: Colors.orangeAccent,
             content: Text(
-              "Your Id Is Not Correct",
+              "Your Username Is Not Correct",
               style: TextStyle(
                 // fontWeight: FontWeight.bold,
                 fontFamily: "Trajan Pro",

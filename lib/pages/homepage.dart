@@ -1,4 +1,3 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -98,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   viewportFraction: 1,
                   enlargeCenterPage: true,
                   enlargeStrategy: CenterPageEnlargeStrategy.height,
-                  autoPlay: true,
+                  autoPlay: false,
                   animateToClosest: true,
                   pauseAutoPlayOnTouch: true,
                   onPageChanged: (index, reason) {

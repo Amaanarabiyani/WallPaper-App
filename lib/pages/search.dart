@@ -13,6 +13,7 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  bool isLoading = false;
   List<Photomodel> photos = [];
   TextEditingController searchcontroller = TextEditingController();
   bool search = false;
@@ -75,12 +76,14 @@ class _SearchState extends State<Search> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextFormField(
+                // textAlign: TextAlign.center,
+
                 style: TextStyle(
-                  fontFamily: "Poet",
+                  fontFamily: "poppins",
                 ),
                 controller: searchcontroller,
                 decoration: InputDecoration(
-                  hintText: "Search Photos",
+                  hintText: "Search WallPaper",
                   hintStyle: TextStyle(
                     fontFamily: "poppins",
                   ),
@@ -111,7 +114,7 @@ class _SearchState extends State<Search> {
             ),
             Expanded(
               child: wallpaper(photos, context),
-            )
+            ),
           ],
         ),
       ),

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:random_string/random_string.dart';
-import 'package:wallpaper_app/admin/admin.dart';
 import 'package:wallpaper_app/service/database.dart';
 
 class AddWalpaper extends StatefulWidget {
@@ -69,7 +68,7 @@ class _AddWalpaperState extends State<AddWalpaper> {
         ),
         leading: GestureDetector(
           onTap: () {
-            Route route = MaterialPageRoute(builder: (context) => AdminPanel());
+            // Route route = MaterialPageRoute(builder: (context) => AdminPanel());
             Navigator.pop(context);
           },
           child: Icon(

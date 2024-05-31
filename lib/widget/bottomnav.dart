@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaper_app/admin/admin.dart';
 import 'package:wallpaper_app/pages/catogories.dart';
 import 'package:wallpaper_app/pages/homepage.dart';
 import 'package:wallpaper_app/pages/search.dart';
@@ -19,14 +20,17 @@ class _BottomNavState extends State<BottomNav> {
   late Search search;
   late Categories categories;
   late Widget currentPage;
+  late AdminPanel adminPanel;
 
   @override
   void initState() {
     homePage = HomePage();
     search = Search();
     categories = Categories();
-    pages = [homePage, search, categories];
+    adminPanel = AdminPanel();
+    pages = [homePage, search, categories, adminPanel];
     currentPage = homePage;
+
     super.initState();
   }
 
@@ -54,6 +58,10 @@ class _BottomNavState extends State<BottomNav> {
             ),
             Icon(
               Icons.category,
+              color: Colors.white,
+            ),
+            Icon(
+              CupertinoIcons.person,
               color: Colors.white,
             ),
           ],

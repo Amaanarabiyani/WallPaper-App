@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/model/photomodel.dart';
+import 'package:wallpaper_app/pages/full_screen.dart';
 
 Widget wallpaper(List<Photomodel> listphoto, BuildContext context) {
   return Container(
@@ -14,12 +15,21 @@ Widget wallpaper(List<Photomodel> listphoto, BuildContext context) {
       children: listphoto.map(
         (Photomodel photomodel) {
           return GridTile(
-            child: Hero(
-              tag: photomodel.src.Protrait!,
-              child: CachedNetworkImage(
-                imageUrl: photomodel.src.Protrait!,
-                fit: BoxFit.cover,
-                width: MediaQuery.of(context).size.width,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            fullScreen(imagePath: photomodel.src.Protrait!)));
+              },
+              child: Hero(
+                tag: photomodel.src.Protrait!,
+                child: CachedNetworkImage(
+                  imageUrl: photomodel.src.Protrait!,
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width,
+                ),
               ),
             ),
           );
