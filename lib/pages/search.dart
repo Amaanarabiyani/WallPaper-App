@@ -1,6 +1,9 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:wallpaper_app/model/photomodel.dart';
 import 'package:http/http.dart' as http;
 import 'package:wallpaper_app/widget/wallpaperwidget.dart';
@@ -13,6 +16,7 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+  bool isLoading = false;
   List<Photomodel> photos = [];
   TextEditingController searchcontroller = TextEditingController();
   bool search = false;
@@ -75,12 +79,14 @@ class _SearchState extends State<Search> {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextFormField(
+                // textAlign: TextAlign.center,
+
                 style: TextStyle(
-                  fontFamily: "Poet",
+                  fontFamily: "poppins",
                 ),
                 controller: searchcontroller,
                 decoration: InputDecoration(
-                  hintText: "Search Photos",
+                  hintText: "Search WallPaper",
                   hintStyle: TextStyle(
                     fontFamily: "poppins",
                   ),
@@ -93,9 +99,9 @@ class _SearchState extends State<Search> {
                         ? GestureDetector(
                             onTap: () {
                               photos = [];
-                              photos.clear();
 
                               search = false;
+
                               searchcontroller.clear();
                               setState(() {});
                             },
@@ -111,10 +117,19 @@ class _SearchState extends State<Search> {
             ),
             Expanded(
               child: wallpaper(photos, context),
-            )
+            ),
           ],
         ),
       ),
     );
   }
+
+  // _save() async {
+  //   var response = await Dio().get(widget.imagePath,
+  //       options: Options(responseType: ResponseType.bytes));
+  //   final result =
+  //       await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+  //   print(result);
+  //   Navigator.pop(context);
+  // }
 }

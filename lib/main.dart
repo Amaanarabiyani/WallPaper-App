@@ -1,8 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:wallpaper_app/admin/admin.dart';
 import 'package:wallpaper_app/firebase_options.dart';
-import 'package:wallpaper_app/pages/all_wallpapr.dart';
 import 'package:wallpaper_app/widget/bottomnav.dart';
 
 void main() async {
